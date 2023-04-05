@@ -1,7 +1,15 @@
 import React from 'react';
 import "./PlayersList.css";
-import players from "../data/players";
-export function PlayersList() {
+import { PlayerDto } from "../data/players";
+
+
+type PlayersListProperties = {
+    players: PlayerDto[];
+}
+
+export function PlayersList(properties: PlayersListProperties) {
+    const { players } = properties;
+    
     let playersElement = [<tr>
         <td colSpan={5}>
             Brak zawodników do wyświetlenia.

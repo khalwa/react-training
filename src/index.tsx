@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { AddPlayer } from "./components/addPlayer/AddPlayer";
-import { PlayersList } from "./components/playersList/PlayersList";
+import { PlayersManagement } from "./components/playersManagement/PlayersManagement";
 import { Welcome } from "./components/welcome/Welcome";
 import "./index.css";
 
@@ -11,7 +10,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Welcome name="Pep Guardiola" />
-    <AddPlayer />
-    <PlayersList />
+    <PlayersManagement />
   </React.StrictMode>
 );
