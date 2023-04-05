@@ -18,10 +18,18 @@ export function PlayersManagement() {
         ]);
     }
 
+    const onPlayerRemovedHandler = (name: string) => {
+        setPlayersList(
+            [
+                ...playersList.filter(p => p.name !== name)
+            ]
+        );
+    }
+
     return (
         <>
             <AddPlayer onPlayerAdded={onPlayerAddedHandler}/>
-            <PlayersList players={playersList} />
+            <PlayersList players={playersList} onPlayerRemoved={onPlayerRemovedHandler} />
         </>
     )
 }

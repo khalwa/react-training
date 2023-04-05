@@ -24,3 +24,15 @@
     background-color: #04AA6D;
     color: white;
 }
+
+button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: royalblue;
+}

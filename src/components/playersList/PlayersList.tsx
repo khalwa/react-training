@@ -5,6 +5,7 @@ import { PlayerDto } from "../data/players";
 
 type PlayersListProperties = {
     players: PlayerDto[];
+    onPlayerRemoved: (name: string) => void;
 }
 
 export function PlayersList(properties: PlayersListProperties) {
@@ -24,7 +25,9 @@ export function PlayersList(properties: PlayersListProperties) {
                     <td>{p.position}</td>
                     <td>{p.club}</td>
                     <td>{p.value} mln.</td>
-                    <td></td>
+                    <td>
+                        <button type="button" onClick={() => properties.onPlayerRemoved(p.name)}>Usuń</button>
+                    </td>
                 </tr>
             )
         });
