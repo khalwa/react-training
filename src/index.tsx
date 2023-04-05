@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Welcome } from './components/welcome/Welcome';
 import './index.css';
 
 const root = ReactDOM.createRoot(
@@ -7,5 +8,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Welcome />
   </React.StrictMode>
 );
