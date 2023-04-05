@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { AddPlayer } from "./components/addPlayer/addPlayer";
+import { AddPlayer } from "./components/addPlayer/AddPlayer";
 import { PlayersList } from "./components/playersList/PlayersList";
 import { Welcome } from "./components/welcome/Welcome";
 import "./index.css";

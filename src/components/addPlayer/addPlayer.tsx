@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./addPlayer.css";
+import "./AddPlayer.css";
 
 export function AddPlayer() {
     const [name, setName] = useState<string>("");
