@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./Welcome.css";
 
-export function Welcome() {
+type WelcomProperties = {
+    name: string;
+}
+
+export function Welcome(properties: WelcomProperties) {
     return (
-        <h1 className="welcome-header">Witaj Fernando Santos!</h1>
+        <h1 className="welcome-header">Witaj {properties.name}!</h1>
     )
 }
