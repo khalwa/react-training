@@ -1,8 +1,7 @@
 import React from 'react';
 import "./PlayersList.css";
-//import players from "../data/players";
+import players from "../data/players";
 export function PlayersList() {
-    const players : any[] = [];
     let playersElement = [<tr>
         <td colSpan={5}>
             Brak zawodników do wyświetlenia.
