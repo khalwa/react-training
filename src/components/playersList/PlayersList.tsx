@@ -1,7 +1,28 @@
 import React from 'react';
 import "./PlayersList.css";
-
+//import players from "../data/players";
 export function PlayersList() {
+    const players : any[] = [];
+    let playersElement = [<tr>
+        <td colSpan={5}>
+            Brak zawodników do wyświetlenia.
+        </td>
+    </tr>];
+
+    if (players.length > 0) {
+        playersElement = players.map(p => {
+            return (
+                <tr>
+                    <td>{p.name}</td>
+                    <td>{p.position}</td>
+                    <td>{p.club}</td>
+                    <td>{p.value} mln.</td>
+                    <td></td>
+                </tr>
+            )
+        });
+    }
+
     return (
         <table id="players">
             <tr>
@@ -11,11 +32,7 @@ export function PlayersList() {
                 <th>Wartość na rynku transferowym</th>
                 <th>Opcje</th>
             </tr>
-            <tr>
-                <td colSpan={5}>
-                    Brak zawodników do wyświetlenia.
-                </td>
-            </tr>
+            {playersElement}
         </table>
     )
 }
