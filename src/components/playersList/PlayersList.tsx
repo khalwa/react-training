@@ -11,7 +11,7 @@ export function PlayersList() {
     if (players.length > 0) {
         playersElement = players.map(p => {
             return (
-                <tr>
+                <tr key={p.name}>
                     <td>{p.name}</td>
                     <td>{p.position}</td>
                     <td>{p.club}</td>
@@ -24,14 +24,18 @@ export function PlayersList() {
 
     return (
         <table id="players">
-            <tr>
-                <th>Zawodnik</th>
-                <th>Pozycja</th>
-                <th>Obecny klub</th>
-                <th>Wartość na rynku transferowym</th>
-                <th>Opcje</th>
-            </tr>
-            {playersElement}
+            <thead>
+                <tr>
+                    <th>Zawodnik</th>
+                    <th>Pozycja</th>
+                    <th>Obecny klub</th>
+                    <th>Wartość na rynku transferowym</th>
+                    <th>Opcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                {playersElement}
+            </tbody>
         </table>
     )
 }
