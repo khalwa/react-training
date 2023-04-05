@@ -36,7 +36,7 @@ export function AddPlayer(properties: AddPlayerProps) {
     }
 
     return (
-        <form className="form-inline" onSubmit={handleFormSubmit}>
+        <form className="form-inline" onSubmit={handleFormSubmit} action="" method="post">
             <label htmlFor="name">Imię i nazwisko:</label>
             <input type="text" id="name" name="name" value={name} onChange={e => setName(e.target.value)} />
             <label htmlFor="club">Klub:</label>
