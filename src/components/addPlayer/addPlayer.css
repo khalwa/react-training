@@ -33,6 +33,14 @@
     cursor: pointer;
 }
 
+.form-inline button:disabled {
+    padding: 10px 20px;
+    background-color: gray;
+    border: 1px solid #ddd;
+    color: black;
+    cursor: not-allowed;
+}
+
 .form-inline button:hover {
     background-color: royalblue;
 }
