@@ -11,7 +11,7 @@ type PlayersListProperties = {
 export function PlayersList(properties: PlayersListProperties) {
     const { players } = properties;
     
-    let playersElement = [<tr>
+    let playersElement = [<tr key="none">
         <td colSpan={5}>
             Brak zawodników do wyświetlenia.
         </td>
